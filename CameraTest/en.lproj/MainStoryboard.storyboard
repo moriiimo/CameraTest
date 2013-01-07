@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Camera Test View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="CameraTestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Laa-p3-ShK">
+                        <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fon-ad-eY1"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJT-4b-uoq">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Afz-Ri-XpY"/>
+                                    <barButtonItem style="done" systemItem="camera" id="4a4-Yx-7jb">
+                                        <connections>
+                                            <action selector="imagePick" destination="2" id="8IE-ff-uRF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="p1F-G5-9B9"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fon-ad-eY1" firstAttribute="leading" secondItem="Laa-p3-ShK" secondAttribute="leading" type="default" id="ETA-eF-jOj"/>
+                            <constraint firstItem="NJT-4b-uoq" firstAttribute="trailing" secondItem="Laa-p3-ShK" secondAttribute="trailing" type="default" id="GEB-H0-era"/>
+                            <constraint firstItem="fon-ad-eY1" firstAttribute="top" secondItem="Laa-p3-ShK" secondAttribute="top" type="default" id="KQ7-re-q7z"/>
+                            <constraint firstItem="NJT-4b-uoq" firstAttribute="bottom" secondItem="Laa-p3-ShK" secondAttribute="bottom" type="default" id="Kbr-dr-PTE"/>
+                            <constraint firstItem="NJT-4b-uoq" firstAttribute="leading" secondItem="Laa-p3-ShK" secondAttribute="leading" type="default" id="RRB-ek-VC2"/>
+                            <constraint firstItem="fon-ad-eY1" firstAttribute="trailing" secondItem="Laa-p3-ShK" secondAttribute="trailing" type="default" id="vVY-F7-PL8"/>
+                            <constraint firstItem="NJT-4b-uoq" firstAttribute="top" secondItem="fon-ad-eY1" secondAttribute="bottom" type="default" id="vaa-pC-g8r"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="_imageView" destination="fon-ad-eY1" id="XIR-JR-P7v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="2"/>
+        </scene>
+        <!--Camera Confirm Test View Controller-->
+        <scene sceneID="LwY-4w-ejg">
+            <objects>
+                <viewController storyboardIdentifier="confirmImageView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Uu5-hi-5Ib" customClass="CameraConfirmTestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CWG-Xp-u7z">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JbQ-Fw-ZZ8">
+                                <items>
+                                    <barButtonItem style="done" systemItem="save" id="cJn-bR-teI">
+                                        <connections>
+                                            <action selector="imageSave" destination="Uu5-hi-5Ib" id="tph-VB-Sz3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wxK-eF-T81"/>
+                                    <barButtonItem style="done" systemItem="cancel" id="hFV-4r-hyO">
+                                        <connections>
+                                            <action selector="imageCancel" destination="Uu5-hi-5Ib" id="DF1-iK-spc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="" translatesAutoresizingMaskIntoConstraints="NO" id="W5x-va-2dQ"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JbQ-Fw-ZZ8" firstAttribute="top" secondItem="W5x-va-2dQ" secondAttribute="bottom" type="default" id="Svr-eD-8fa"/>
+                            <constraint firstItem="W5x-va-2dQ" firstAttribute="trailing" secondItem="CWG-Xp-u7z" secondAttribute="trailing" type="default" id="VGh-4R-HQF"/>
+                            <constraint firstItem="W5x-va-2dQ" firstAttribute="leading" secondItem="CWG-Xp-u7z" secondAttribute="leading" type="default" id="W2U-SZ-bvx"/>
+                            <constraint firstItem="JbQ-Fw-ZZ8" firstAttribute="trailing" secondItem="CWG-Xp-u7z" secondAttribute="trailing" type="default" id="XVv-yI-Erk"/>
+                            <constraint firstItem="JbQ-Fw-ZZ8" firstAttribute="bottom" secondItem="CWG-Xp-u7z" secondAttribute="bottom" type="default" id="aQu-1z-WYW"/>
+                            <constraint firstItem="JbQ-Fw-ZZ8" firstAttribute="leading" secondItem="CWG-Xp-u7z" secondAttribute="leading" type="default" id="xcm-hk-LXf"/>
+                            <constraint firstItem="W5x-va-2dQ" firstAttribute="top" secondItem="CWG-Xp-u7z" secondAttribute="top" type="default" id="yhU-yF-pBa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYF-Ve-1NQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381" y="0.0"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="CameraConfirmTestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraConfirmTestViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="imageCancel"/>
+                <relationship kind="action" name="imageSave"/>
+            </relationships>
+        </class>
+        <class className="CameraTestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraTestViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="imagePick"/>
+                <relationship kind="outlet" name="_imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
